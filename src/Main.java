@@ -31,7 +31,7 @@ class Main implements DatabaseObserver {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.registerObserver(main); // Register Main itself as an observer
+        main.registerObserver(main); 
         main.start();
     }
 
@@ -54,7 +54,7 @@ class Main implements DatabaseObserver {
                 System.out.print("Menu:" + "\n" +
                         "1. View books in database" + "\n" +
                         "2. Add new book into database" + "\n" +
-                        "3. Update database" + "\n" + // Corrected the menu option
+                        "3. Update database" + "\n" +
                         "4. Delete book in database" + "\n" +
                         "5. Exit" + "\n" +
                         "Enter option: ");
@@ -154,7 +154,6 @@ class Main implements DatabaseObserver {
 
     @Override
     public void update() {
-        // Define behavior to update UI or take action upon notification from subject (Main class)
         System.out.println("Database state changed");
     }
 }
